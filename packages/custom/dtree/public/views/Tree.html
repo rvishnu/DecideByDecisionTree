@@ -1,0 +1,42 @@
+<div data-ng-include="'/system/views/header.html'"></div>
+<div class="container">
+
+
+  <div class="page-header">
+    <h1> <span ng-bind="ctrl.node.childQuestion"></span>
+    </h1>
+
+  </div>
+
+  <div ng-repeat="value in ctrl.node.children">
+
+    <div class="row">
+
+    <!--button ng-click="ctrl.getNode(value._id)"-->
+    <div class="col-lg-6">
+      <a ui-sref="tree({nodeid:value._id})" class="btn btn-lg" ng-show="!value.finalNode">
+        <span ng-bind="value.name"></span></a>
+
+        <a ui-sref="article by id({articleId:ctrl.getArticleId(value.pageURL)})" class="btn btn-lg" ng-show="value.finalNode && value.pageURL.indexOf('articleId') != -1">
+            <span ng-bind="value.name"></span></a>
+        <a ui-sref="tree({nodeid:ctrl.getNodeId(value.pageURL)})" class="btn btn-lg" ng-show="value.finalNode && value.pageURL.indexOf('decide') != -1">
+            <span ng-bind="value.name"></span></a>
+        <a ui-sref="createResumeInfo()" class="btn btn-lg" ng-show="value.finalNode && value.pageURL.indexOf('resume') != -1">
+            <span ng-bind="value.name"></span></a>
+
+
+    </div>
+    <!--/button -->
+    <div class="btn-group-sm">
+      <button type="button" class="btn btn-group-sm" ng-click="ctrl.editNode(value)" ng-show="ctrl.hasAuthorization()">Edit</button>
+      <button type="button" class="btn btn-group-sm" ng-click="ctrl.confirmDelete(value, ctrl.node)" ng-show="ctrl.hasAuthorization()">Delete</button>
+    </div>
+  </div>
+  </div>
+
+  <div class="btn-group">
+    <button type="button" class="btn btn-default" ng-click="ctrl.editNode(value, ctrl.node)" ng-show="ctrl.hasAuthorization()">Add</button>
+  </div>
+
+</div>
+

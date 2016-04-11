@@ -1,0 +1,110 @@
+<header  class="content-section-inner-new">
+    <nav class="navbar navbar-default navbar-top topnav" role="navigation" style="background:none;">
+        <div class="container topnav">
+
+            <div class="navbar-header">
+                <div > <a href="index.html"><img class="logo" src="/dtree/assets/img/logo.png"></a></div>
+                <div class="col-md-12   col-sm-12 col-xs-12">
+                    <!--h2 class="top_text">Share Your Resume</h2-->
+                </div>
+            </div>
+
+
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+
+
+    <form name="resumeController.editContactUsForm" ng-submit="resumeController.save()" validate>
+
+        <div class="row" >
+            <h1 class="col-sm-8">Share your resume</h1>
+        </div>
+
+        <div class="row">
+            <label for="name" class="col-sm-2 control-label">Name</label>
+
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="name" name="name"
+                       ng-model="resumeController.resume.name" ng-maxlength="60" required>
+        <span style="color:red" ng-show="resumeController.editContactUsForm.name.$dirty &&
+                resumeController.editContactUsForm.name.$invalid">
+          <span ng-show="resumeController.editContactUsForm.name.$error.maxlength">Name should not empty</span>
+        </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="email" class="col-sm-2 control-label">Email</label>
+
+            <div class="col-sm-6">
+                <input type="email" class="form-control" id="email" name="email"
+                       ng-model="resumeController.resume.email" ng-maxlength="100" required>
+        <span style="color:red" ng-show="resumeController.editContactUsForm.email.$dirty &&
+                resumeController.editContactUsForm.email.$invalid">
+          <span ng-show="resumeController.editContactUsForm.email.$error.maxlength">Email is not valid</span>
+        </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="phoneNo" class="col-sm-2 control-label">Phone Number</label>
+
+            <div class="col-sm-6">
+                <input type="number" class="form-control" id="phoneNo" name="phoneNo"
+                       ng-model="resumeController.resume.phoneNo" ng-maxlength="10" ng-minlength="10">
+        <span style="color:red" ng-show="resumeController.editContactUsForm.phoneNo.$dirty &&
+                resumeController.editContactUsForm.phoneNo.$invalid">
+          <span ng-show="resumeController.editContactUsForm.phoneNo.$error.maxlength">Phone Number is not valid</span>
+        </span>
+            </div>
+        </div>
+        <div class="row">
+            <label for="linkedinProfileUrl" class="col-sm-2 control-label">LinkedIn Public URL</label>
+
+            <div class="col-sm-6">
+                <input type="url" class="form-control" id="linkedinProfileUrl" name="linkedinProfileUrl"
+                       ng-model="resumeController.resume.linkedinProfileUrl" ng-maxlength="150" ng-minlength="10">
+        <span style="color:red" ng-show="resumeController.editContactUsForm.linkedinProfileUrl.$dirty &&
+                resumeController.editContactUsForm.linkedinProfileUrl.$invalid">
+          <span ng-show="resumeController.editContactUsForm.linkedinProfileUrl.$error.maxlength">Linked In Profile is not valid</span>
+        </span>
+            </div>
+        </div>
+        <div class="row">
+            <label for="shareResumeUrl" class="col-sm-2 control-label">Your Online Resume URL</label>
+
+            <div class="col-sm-6">
+                <input type="url" class="form-control" id="shareResumeUrl" name="shareResumeUrl"
+                       ng-model="resumeController.resume.shareResumeUrl" ng-maxlength="250" ng-minlength="10">
+        <span style="color:red" ng-show="resumeController.editContactUsForm.shareResumeUrl.$dirty &&
+                resumeController.editContactUsForm.shareResumeUrl.$invalid">
+          <span ng-show="resumeController.editContactUsForm.shareResumeUrl.$error.maxlength">Phone Number is not valid</span>
+        </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="shareResumeUrl" class="col-sm-2 control-label">Upload Your Resume</label>
+            <div class="col-sm-6">
+                <mean-upload file-dest="'/packages/resumes/'"
+                         upload-callback="resumeController.uploadFinished(files)"
+                         upload-file-callback="resumeController.uploadFileCallback(file)">
+                </mean-upload><br>
+                <ul class="list-group">
+                    <li ng-repeat="file in resumeController.files" class="list-group-item">
+                        {{file.name}}
+                        <span class="glyphicon glyphicon-remove-circle pull-right" ng-click="resumeController.deleteFile(file)"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row" >
+            <button  type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+
+</div>

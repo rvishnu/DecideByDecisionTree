@@ -1,0 +1,495 @@
+
+
+
+/* Hover and Active States for All Button Styles */
+
+.media a:link{ opacity: 1;  float:left;  margin: 0 8px 0px 0; }
+
+a:active { opacity: 0.8; }
+
+/* Button Styles */
+
+.facebook {
+    display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.facebook:after {
+	content: "A";
+}
+
+.facebook:hover { 
+	-webkit-box-shadow: inset 0 0 0 250px rgba(255,255,255,.1);
+	-moz-box-shadow: inset 0 0 0 250px rgba(255,255,255,.1);
+	box-shadow: inset 0 0 0 250px rgba(255,255,255,.1);
+	}
+
+
+.twitter {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #4e9edc;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+	
+}
+
+.twitter:after {
+	content: "B";
+}
+.twitter:hover { 
+	-webkit-box-shadow: inset 0 0 0 250px rgba(255,255,255,.1);
+	-moz-box-shadow: inset 0 0 0 250px rgba(255,255,255,.1);
+	box-shadow: inset 0 0 0 250px rgba(255,255,255,.1);
+	}
+
+.google {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #be3100;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+	
+}
+
+.google:after {
+	content: "C";
+}
+.google:hover { 
+	-webkit-box-shadow: inset 0 0 0 250px rgba(255,255,255,.1);
+	-moz-box-shadow: inset 0 0 0 250px rgba(255,255,255,.1);
+	box-shadow: inset 0 0 0 250px rgba(255,255,255,.1);
+	}
+
+.myspace {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.myspace:after {
+	content: "D";
+}
+
+.instagram {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.instagram:after {
+	content: "E";
+}
+
+.linkedin {
+ display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #005a87;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.linkedin:after {
+	content: "F";
+}
+.linkedin:hover { 
+	-webkit-box-shadow: inset 0 0 0 250px rgba(255,255,255,.1);
+	-moz-box-shadow: inset 0 0 0 250px rgba(255,255,255,.1);
+	box-shadow: inset 0 0 0 250px rgba(255,255,255,.1);
+	}
+
+
+.vimeo {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.vimeo:after {
+	content: "G";
+}
+
+.youtube {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #fe3400;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.youtube:after {
+	content: "H";
+}
+.youtube:hover { 
+	-webkit-box-shadow: inset 0 0 0 250px rgba(255,255,255,.1);
+	-moz-box-shadow: inset 0 0 0 250px rgba(255,255,255,.1);
+	box-shadow: inset 0 0 0 250px rgba(255,255,255,.1);
+	}
+.dribbble {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.dribbble:after {
+	content: "I";
+}
+
+.forrst {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.forrst:after {
+	content: "J";
+}
+
+.stumbleupon {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.stumbleupon:after {
+	content: "K";
+}
+
+.pinterest {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.pinterest:after {
+	content: "L";
+}
+
+.blogger {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.blogger:after {
+	content: "M";
+}
+
+.yahoo {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.yahoo:after {
+	content: "N";
+}
+
+.evernote {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.evernote:after {
+	content: "O";
+}
+
+.wordpress {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.wordpress:after {
+	content: "P";
+}
+
+.foursquare {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.foursquare:after {
+	content: "Q";
+}
+
+.lastfm {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.lastfm:after {
+	content: "R";
+}
+
+.behance {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.behance:after {
+	content: "S";
+}
+
+.tumblr {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.tumblr:after {
+	content: "T";
+}
+
+.feed {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.feed:after {
+	content: "U";
+}
+
+.skype {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.skype:after {
+	content: "V";
+}
+
+.email {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.email:after {
+	content: "W";
+}
+
+.sharethis {
+	 display: block;
+    text-decoration: none;
+    font-family: 'SocialGlyphs';
+    text-align: center;
+    font-size: 17px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true)";
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40ffffff,Positive=true);
+    background-color: #0070cf;
+    padding: 0px;
+    width: 44px;
+       height: 28px;
+}
+
+.sharethis:after {
+	content: "X";
+}

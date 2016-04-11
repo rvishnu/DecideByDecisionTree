@@ -1,0 +1,97 @@
+<div class="modal-header">
+  <h3 class="modal-title">Edit Node</h3>
+</div>
+<form name="ctrll.editNodeForm" ng-submit="ctrll.save()" novalidate>
+<div class="modal-body">
+  <div>
+
+      <div class="form-group">
+          <label for="name" class="col-sm-2 control-label">Final Node</label>
+
+          <div>
+              <input type="checkbox"  id="finalNode"  name="finalNode" ng-model="ctrll.node.finalNode" ng-change="!ctrll.node.finalNode || ctrll.getArticles()"/>
+
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="SelectionText" class="col-sm-2 control-label">Comments</label>
+          <input type="text" class="form-control" id="SelectionText" name="commentsOnSelection" ng-model="ctrll.node.commentsOnSelection" ng-maxlength="100">
+
+          <!--div text-angular id="SelectionText" ng-model="ctrll.node.commentsOnSelection"></div-->
+      </div>
+
+      <div class="form-group">
+          <label for="SelectionText" class="col-sm-2 control-label">Sequence</label>
+          <input type="number" class="form-control" id="sequence" name="sequence" ng-model="ctrll.node.sequence" max="15" min="1">
+      </div>
+
+      <div class="form-group">
+      <label for="name" class="col-sm-2 control-label">Name</label>
+
+
+        <input type="text" class="form-control" id="name" name="name" ng-model="ctrll.node.name" ng-maxlength="40">
+
+          <span style="color:red" ng-show="ctrll.editNodeForm.nameOfNode.$dirty && ctrll.editNodeForm.nameOfNode.$invalid">
+          <span ng-show="ctrll.editNodeForm.nameOfNode.$error.required">Name is required.</span>
+            </span>
+    </div>
+
+    <div class="form-group" ng-hide="ctrll.node.finalNode">
+      <label for="nextQuestion" class="col-sm-2 control-label">Next Question</label>
+
+      <div class="col-sm-10" >
+        <input type="text" class="form-control" id="nextQuestion" name="childQuestion" ng-model="ctrll.node.childQuestion" ng-maxlength="100">
+        <span style="color:red" ng-show="ctrll.editNodeForm.childQuestion.$dirty &&
+                ctrll.editNodeForm.childQuestion.$invalid">
+          <span ng-show="ctrll.editNodeForm.childQuestion.$error.maxlength">Be concise with the question</span>
+        </span>
+      </div>
+    </div>
+
+
+    <div class="form-group" ng-hide="ctrll.node.finalNode">
+  <label for="comment">Text:</label>
+        <div text-angular id="comment" ng-model="ctrll.node.helpText"></div>
+</div>
+
+
+
+<!--div class="form-group">
+  <label for="toolTip" class="col-sm-2 control-label">Tool Tip Text:</label>
+
+  <div class="col-sm-10">
+    <input type="text" class="form-control" rows=2" name="toolTip" id="toolTip" ng-model="ctrll.node.toolTip" ng-maxlength="20">
+        <span style="color:red" ng-show="ctrll.editNodeForm.toolTip.$dirty &&
+                ctrll.editNodeForm.toolTip.$invalid">
+          <span ng-show="ctrll.editNodeForm.toolTip.$error.maxlength">
+            Be concise with the Tool Tip</span>
+          </span>
+  </div>
+</div-->
+
+  <div class="form-group" ng-show="ctrll.node.finalNode">
+    <label for="pageURL" class="col-sm-2 control-label">Page / Template URL:</label>
+
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="pageURL" ng-model="ctrll.node.pageURL">
+    </div>
+  </div>
+    <div class="form-group" ng-show="ctrll.node.finalNode">
+      <label for="Article" class="col-sm-2 control-label">Article Id:</label>
+      <div class="col-sm-10">
+        <select name="Article" id="article" ng-model="ctrll.node.pageURL">
+          <option ng-repeat="option in ctrll.articles" value='{"articleId":"{{option._id}}"}'>
+              {{option.title}}</option>
+        </select>
+      </div>
+    </div>
+
+</div>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" ng-click="submit" ng-disabled="ctrll.editNodeForm.$invalid">save</button>
+    <button class="btn btn-info" ng-click="ctrll.createArticle()" ng-disabled="ctrll.editNodeForm.$invalid"  ng-show="ctrll.node.finalNode">Create Article</button>
+  <button class="btn btn-warning" ng-click="ctrll.cancel()">Cancel</button>
+</div>
+</form>

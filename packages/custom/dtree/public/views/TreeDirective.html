@@ -1,0 +1,62 @@
+<section class="content-section-inner">
+    <div class="container">
+        <div class="row">
+            <!--div class="col-md-12">
+                <div di-sanitize-string="dtCtrl.node.commentsOnSelection"
+                     ng-show="dtCtrl.node.commentsOnSelection"></div>
+            </div-->
+            <div class="col-md-12   col-sm-12  text-center">
+                <!--ul class="breadcrumb">
+                    <li><a href="index.html"><< Home</a></li>
+                    <li class="active">Go to India</li>
+                </ul-->
+                <div class="clearfix"></div>
+
+                <h3 class="section-heading m-top">
+                <span ng-bind="dtCtrl.node.childQuestion"></span></h3>
+
+
+                <div ng-show="dtCtrl.node.children.length>0">
+                    <ul class="qustion">
+
+                    <div ng-repeat="value in dtCtrl.node.children">
+
+                        <li class="text-medium">
+                            <a ui-sref="decide({nodeid:value._id})" tooltip="{{value.toolTip}}" ng-show="value._id && !value.finalNode" >
+                                <span ng-bind="value.name"></span>
+                            </a>
+                            <a ui-sref="article by id({articleId:dtCtrl.getArticleId(value.pageURL)})"
+                               ng-show="value.finalNode && value.pageURL.indexOf('articleId') != -1">
+                                <span ng-bind="value.name"></span>
+                            </a>
+                            <a ui-sref="decide({nodeid:dtCtrl.getNodeId(value.pageURL)})"
+                               ng-show="value.finalNode && value.pageURL.indexOf('decide') != -1">
+                                <span ng-bind="value.name"></span>
+                            </a>
+
+
+                        </li>
+
+                    </div>
+                        </ul>
+                </div>
+                <!--Body content-->
+
+            <div ng-show="dtCtrl.node && dtCtrl.node.children.length>0">
+                <p class="bot ">Don't find an option,
+                <a href=/contactus/create/{{dtCtrl.node._id}}>Contact Us</a></p>
+            </div>
+
+                <!-- Commenting as I am going to have new page for all the content -->
+                <div ng-show="dtCtrl.node.helpText">
+                  <div di-sanitize-string="dtCtrl.node.helpText"></div>
+                </div>
+
+
+                <di-get-content node="dtCtrl.node"/>
+                <!-- display the url, if there are no child nodes redirect to the url.>
+              </div -->
+        </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,15 @@
+/* 
+Font designed by MediaLoot for use in CSS3 Social Media Buttons package only. 
+Please do not redistribute or share as is.
+*/
+
+@font-face {
+    font-family: 'SocialGlyphs';
+    src: url('/dtree/assets/fonts/socialglyphs-webfont.eot');
+    src: url('/dtree/assets/fonts/socialglyphs-webfontd41d.eot?#iefix') format('embedded-opentype'),
+         url('/dtree/assets/fonts/socialglyphs-webfont.woff') format('woff'),
+         url('/dtree/assets/fonts/socialglyphs-webfont.ttf') format('truetype'),
+         url('/dtree/assets/fonts/socialglyphs-webfont.svg#SocialGlyphsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

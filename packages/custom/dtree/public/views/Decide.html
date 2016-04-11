@@ -1,0 +1,33 @@
+<div data-ng-include="'/system/views/header.html'"></div>
+<div><di-tree node="ctrl.node"/></div>
+
+
+
+<!--  <div class="page-header">
+    <h1><span ng-bind="ctrl.node.childQuestion"></span>
+    </h1>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div ng-show="ctrl.node.children.length>0">
+      <div class="col-md-5">
+        <div ng-repeat="value in ctrl.node.children">
+          <p>
+            <a ui-sref="decide({nodeid:value._id})" class="btn btn-primary btn-lg"
+                tooltip="{{value.toolTip}}">
+              <span ng-bind="value.name"></span></a>
+          </p>
+        </div>
+      </div>
+      </div>
+        <!--Body content-->
+
+
+ <!--       <div class="col-md-5 well" ng-show="ctrl.node.helpText">
+          <p><div di-sanitize-string="ctrl.node.helpText"></div></p>
+        </div>
+
+      <di-get-content node="ctrl.node"/>
+      <!-- display the url, if there are no child nodes redirect to the url.-->
+ <!--   </div>
+  </div> -->
