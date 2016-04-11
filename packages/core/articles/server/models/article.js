@@ -20,17 +20,32 @@ var ArticleSchema = new Schema({
     required: true,
     trim: true
   },
+  description: {
+      type: String,
+      required: true,
+      trim: true
+  },
   content: {
     type: String,
     required: true,
     trim: true
   },
+  region: {
+      type: String,
+      trim: true
+  },
   user: {
     type: Schema.ObjectId,
-    ref: 'User',
-    required: true
+    ref: 'User'
   },
   permissions: {
+    type: Array
+  },
+  relatedDocuments:[{
+      type: Schema.ObjectId,
+      ref: 'Article'
+  }],
+  tags: {
     type: Array
   },
   updated: {

@@ -51,6 +51,6 @@ angular.module('mean.dtree') //, ['ngAnimate', 'ngResource', 'ui.router', 'ui.bo
         $urlRouterProvider.when('/ModifyChangeJob', '/tree/565e5523ab285b0b0047af86');
         $urlRouterProvider.when('/ModifyGetMarried', '/tree/565e578aab285b0b0047afb5');
 
-        $viewPathProvider.override('system/views/index.html', 'dtree/views/index.html');
+ //       $viewPathProvider.override('system/views/index.html', 'dtree/views/index.html');
 
     })

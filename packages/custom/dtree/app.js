@@ -24,15 +24,17 @@ Dtree.register(function(system, app, auth, database, articles) {
     menu: 'main'
   });
   
-  Dtree.aggregateAsset('css', 'style.css');
-    Dtree.aggregateAsset('css', 'font.css');
+ // Dtree.aggregateAsset('css', 'style.css');
+ //   Dtree.aggregateAsset('css', 'font.css');
 
-    Dtree.aggregateAsset('css', 'ml-social-buttons.css');
+ //   Dtree.aggregateAsset('css', 'ml-social-buttons.css');
 
 
-    Dtree.aggregateAsset('fonts', 'socialglyphs-webfont.eot');
+ //   Dtree.aggregateAsset('fonts', 'socialglyphs-webfont.eot');
 
-    Dtree.aggregateAsset('js', 'script.js');
+  //  Dtree.aggregateAsset('js', 'script.js');
+
+    Dtree.angularDependencies(['textAngular']);
 
     /**
     //Uncomment to use. Requires meanio@0.3.7 or above
@@ -56,7 +58,6 @@ Dtree.register(function(system, app, auth, database, articles) {
     });
     */
 
-    app.set('views',  __dirname + '/server/views');
 
   return Dtree;
 });

@@ -1,3 +1,12 @@
+DecideByDecisionTree, helps you in developing Decision Trees, which helps users in finding what they want by decision tree.
+
+This is an alternative to ZingTree.com or yonyx.com
+
+Here is an example
+
+http://simpledecisions.us/
+
+
 [![Build Status](https://travis-ci.org/linnovate/mean.svg)](https://travis-ci.org/linnovate/mean)
 [![Dependencies Status](https://david-dm.org/linnovate/mean.svg)](https://david-dm.org/linnovate/mean)
 [![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/linnovate/mean?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)

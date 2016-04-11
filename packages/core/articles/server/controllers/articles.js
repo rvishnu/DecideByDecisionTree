@@ -5,7 +5,6 @@
  */
 var mongoose = require('mongoose'),
     Article = mongoose.model('Article'),
-    config = require('meanio').loadConfig(),
     _ = require('lodash');
 
 module.exports = function(Articles) {
@@ -15,7 +14,12 @@ module.exports = function(Articles) {
          * Find article by id
          */
         article: function(req, res, next, id) {
-            Article.load(id, function(err, article) {
+            res.header('Access-Control-Allow-Origin', '*');
+            res.header('Access-Control-Allow-Methods', 'GET');
+            res.header('Access-Control-Allow-Headers', 'Content-Type');
+
+            Article.findById(id).populate('user').populate('relatedDocuments').
+                exec(function(err, article) {
                 if (err) return next(err);
                 if (!article) return next(new Error('Failed to load article ' + id));
                 req.article = article;
@@ -26,6 +30,7 @@ module.exports = function(Articles) {
          * Create an article
          */
         create: function(req, res) {
+
             var article = new Article(req.body);
             article.user = req.user;
 
@@ -36,14 +41,9 @@ module.exports = function(Articles) {
                     });
                 }
 
-                Articles.events.publish({
-                    action: 'created',
-                    user: {
-                        name: req.user.name
-                    },
-                    url: config.hostname + '/articles/' + article._id,
-                    name: article.title
-                });
+     //           Articles.events.publish('create', {
+     //               description: req.user.name + ' created ' + req.body.title + ' article.'
+     //           });
 
                 res.json(article);
             });
@@ -53,7 +53,6 @@ module.exports = function(Articles) {
          */
         update: function(req, res) {
             var article = req.article;
-
             article = _.extend(article, req.body);
 
 
@@ -64,14 +63,9 @@ module.exports = function(Articles) {
                     });
                 }
 
-                Articles.events.publish({
-                    action: 'updated',
-                    user: {
-                        name: req.user.name
-                    },
-                    name: article.title,
-                    url: config.hostname + '/articles/' + article._id
-                });
+ //               Articles.events.publish('update', {
+ //                   description: req.user.name + ' updated ' + req.body.title + ' article.'
+ //               });
 
                 res.json(article);
             });
@@ -90,13 +84,9 @@ module.exports = function(Articles) {
                     });
                 }
 
-                Articles.events.publish({
-                    action: 'deleted',
-                    user: {
-                        name: req.user.name
-                    },
-                    name: article.title
-                });
+                //Articles.events.publish('remove', {
+                //    description: req.user.name + ' deleted ' + article.title + ' article.'
+                //});
 
                 res.json(article);
             });
@@ -105,15 +95,11 @@ module.exports = function(Articles) {
          * Show an article
          */
         show: function(req, res) {
-
-            Articles.events.publish({
-                action: 'viewed',
-                user: {
-                    name: req.user.name
-                },
-                name: req.article.title,
-                url: config.hostname + '/articles/' + req.article._id
-            });
+            if(req.user) {
+                //Articles.events.publish('view', {
+                //    description: req.user.name + ' read ' + req.article.title + ' article.'
+                //});
+            }
 
             res.json(req.article);
         },
@@ -123,15 +109,32 @@ module.exports = function(Articles) {
         all: function(req, res) {
             var query = req.acl.query('Article');
 
-            query.find({}).sort('-created').populate('user', 'name username').exec(function(err, articles) {
-                if (err) {
-                    return res.status(500).json({
-                        error: 'Cannot list the articles'
-                    });
-                }
+            var fields = req.query.field;
 
-                res.json(articles)
-            });
+            if(fields)
+            {
+                query.find({}).select(fields)
+                    .exec(function (err, articles) {
+                        if (err) {
+                            return res.status(500).json({
+                                error: 'Cannot list the articles'
+                            });
+                        }
+
+                        res.json(articles)
+                    });
+            }
+            else {
+                query.find({}).sort('-created').populate('user', 'name username').exec(function (err, articles) {
+                    if (err) {
+                        return res.status(500).json({
+                            error: 'Cannot list the articles'
+                        });
+                    }
+
+                    res.json(articles)
+                });
+            }
 
         }
     };
