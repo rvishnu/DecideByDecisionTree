@@ -2,13 +2,12 @@ DecideByDecisionTree helps you in developing Decision Trees, which helps users i
 
 This is an alternative to http://www.ZingTree.com or http://www.yonyx.com.
 
-Here is an example
+Here is an example of a website that uses DecideByDecisionTree
 http://simpledecisions.us/
 
 **How to Set it up:**
 
 **Install Node:** 
-Version: 0.12.4
 Follow the link & install Nodejs.
 https://nodejs.org/en/download/
 
