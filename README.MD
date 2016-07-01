@@ -2,7 +2,7 @@ DecideByDecisionTree helps you in developing Decision Trees, which helps users i
 
 This is an alternative to http://www.ZingTree.com or http://www.yonyx.com.
 
-Here is an example of a website that uses DecideByDecisionTree
+Here is an example
 http://simpledecisions.us/
 
 **How to Set it up:**
@@ -49,6 +49,7 @@ Setting up a decision tree involves creating a root node. You can connect to the
 
 **Setting up the Root Node:**
 Create a collection NodeModels and add the following root node
+
 {    "_id": {        "$oid": "55a08a699f6f3594a84d324d"
     },
     "path": "FirstNode",
@@ -56,9 +57,12 @@ Create a collection NodeModels and add the following root node
     "childQuestion": "Root Node",
     "__v": 0
 }
+
 This will create the root node in the database.
+
 Now you can go to the URL
 http://localhost:3000/tree/ FirstNode
+
 From there you can add your Child Nodes as you wish. You can create any number of decision trees.
 
 For viewing the tree you can use
