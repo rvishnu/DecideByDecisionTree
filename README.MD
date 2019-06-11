@@ -80,5 +80,5 @@ This project is build on top of Mean.io. So for more information look at http://
  2. Deployment of the application in S3 and EC2 with Ansible & Docker Integration Test Cases
 
 **Applications Built using DecideByDecisionTree:**
-www.simpledecisions.us
+https://simpledecisions.us
 
